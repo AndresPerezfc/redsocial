@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('statuses', 'StatusesController@store')->name('statuses.store')->middleware('auth');
+
+Route::auth();
