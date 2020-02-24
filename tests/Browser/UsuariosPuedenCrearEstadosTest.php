@@ -9,6 +9,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class UsuariosPuedenCrearEstadosTest extends DuskTestCase
 {
+    
     use DatabaseMigrations;
     /**
      * A Dusk test example.
@@ -17,6 +18,7 @@ class UsuariosPuedenCrearEstadosTest extends DuskTestCase
      */
     public function test_usuarios_pueden_crear_estados()
     {
+        
         $user = factory(User::class)->create();
 
         $this->browse(function (Browser $browser) use ($user) {
@@ -25,7 +27,7 @@ class UsuariosPuedenCrearEstadosTest extends DuskTestCase
                     ->type('body', 'Mi primer status')
                     ->press('#create-status')
                     ->screenshot('crear_estatus')
-                    ->assertSee('Mi primer status');
+                    ->assertSee('Mi primer status'); 
         });
     }
 }
