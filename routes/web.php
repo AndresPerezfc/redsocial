@@ -13,7 +13,11 @@
 
 Route::view('/', 'welcome')->name('home');
 
+//rutas de los estados
 Route::get('statuses', 'StatusesController@index');
 Route::post('statuses', 'StatusesController@store')->name('statuses.store')->middleware('auth');
+
+//rutas de los likes de los estados
+Route::post('statuses/{status}/likes', 'StatusLikeController@store')->name('statuses.likes.store')->middleware('auth');
 
 Route::auth();
