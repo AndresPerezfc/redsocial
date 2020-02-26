@@ -15,9 +15,8 @@ class StatusesController extends Controller
 
     public function index(){
         return StatusResource::collection(
-            Status::orderBy('id', 'ASC')->get()
+            Status::orderBy('created_at', 'DESC')->get()
         );
-        
     }
 
     public function store(){

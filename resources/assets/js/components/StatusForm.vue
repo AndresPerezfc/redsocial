@@ -1,12 +1,12 @@
 <template>
   <div>
-    <form @submit.prevent="submit">
+    <form @submit.prevent="submit" v-if="estaAutenticado">
       <div class="card-body">
         <textarea
           v-model="body"
           class="form-control border-0"
           name="body"
-          placeholder="Ingrese estado"
+          :placeholder="`¿Qué estas pensando ${usuarioActual.name}?`"
         ></textarea>
       </div>
 
@@ -14,6 +14,10 @@
         <button class="btn btn-secondary" id="create-status">Publicar estado</button>
       </div>
     </form>
+
+    <div v-else class="card-body">
+      <a href="/login">Debes estar autenticado</a>
+    </div>
   </div>
 </template>
 
@@ -24,6 +28,7 @@ export default {
       body: ""
     };
   },
+
   methods: {
     submit() {
       axios
