@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class StatusLikeController extends Controller
 {
     public function store(status $status){
+        
         $status->like();
     }
 }

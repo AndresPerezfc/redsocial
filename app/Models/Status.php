@@ -25,6 +25,6 @@ class Status extends Model
     }
 
     public function isLiked(){
-        $this->likes()->where('user_id', auth()->id())->exists();
+        return $this->likes()->where('user_id', auth()->id())->exists();
     }
 }
