@@ -11,7 +11,9 @@
       </div>
 
       <div class="card-footer">
-        <button class="btn btn-secondary" id="create-status">Publicar estado</button>
+        <button class="btn btn-secondary" id="create-status">
+          <i class="fa fa-paper-plane"></i> Publicar estado
+        </button>
       </div>
     </form>
 

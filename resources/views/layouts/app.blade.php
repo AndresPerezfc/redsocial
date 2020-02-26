@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{csrf_token()}}">
     <meta name="user" content="{{Auth::user()}}">
+    <script src="https://kit.fontawesome.com/1a79ad85b4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <title>SocialApp</title>
 </head>
@@ -12,7 +13,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light navbar-socialapp">
         <div class="container">
-        <a class="navbar-brand" href="{{route('home')}}">Aplicación</a>
+        <a class="navbar-brand" href="{{route('home')}}"><i class="fa fa-brain text-secondary"></i> Aplicación</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
