@@ -17,7 +17,7 @@
         <p class="card-text text-secondary" v-text="status.body"></p>
       </div>
 
-      <div class="card-footer p-2">
+      <div class="card-footer p-2 d-flex justify-content-between align-items-center">
         <button
           class="btn btn-link btn-sm"
           v-if="status.is_liked"
@@ -31,7 +31,10 @@
         <button class="btn btn-link btn-sm" v-else dusk="like-btn" @click="like(status)">
           <i class="far fa-thumbs-up"></i> Me gusta
         </button>
-        <span dusk="list-count">{{status.likes_count}}</span>
+        <div class="mr-2">
+          <i class="far fa-thumbs-up"></i>
+          <span dusk="list-count">{{status.likes_count}}</span>
+        </div>
       </div>
     </div>
   </div>
