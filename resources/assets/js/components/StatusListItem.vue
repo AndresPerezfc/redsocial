@@ -27,7 +27,10 @@
         <textarea name="comment" v-model="newComment"></textarea>
         <button dusk="comment-btn">Enviar</button>
       </form>
-      <div v-for="comment in comments" v-bind:key="comment.id">{{comment.body}}</div>
+      <div v-for="comment in comments" v-bind:key="comment.id">
+        {{comment.user_name}}
+        {{comment.body}}
+      </div>
     </div>
   </div>
 </template>

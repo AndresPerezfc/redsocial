@@ -15,7 +15,9 @@ class CommentResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'body' => $this->body
+            'body' => $this->body,
+            'user_name' => $this->user->name,
+            'user_avatar' => 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'
         ];
     }
 }
