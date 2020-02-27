@@ -17,8 +17,10 @@
 <script>
 export default {
   props: {
-    status: Object,
-    required: true
+    status: {
+      type: Object,
+      required: true
+    }
   },
   methods: {
     like(status) {

@@ -49855,7 +49855,10 @@ var render = function() {
     "div",
     { on: { click: _vm.redireccionarInvitado } },
     _vm._l(_vm.statuses, function(status) {
-      return _c("status-list-item", { key: status.id })
+      return _c("status-list-item", {
+        key: status.id,
+        attrs: { status: status }
+      })
     }),
     1
   )
@@ -49990,7 +49993,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -50035,8 +50038,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    status: Object,
-    required: true
+    status: {
+      type: Object,
+      required: true
+    }
   },
   components: {
     LikeBtn: __WEBPACK_IMPORTED_MODULE_0__LikeBtn___default.a
@@ -50208,7 +50213,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -50238,8 +50243,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    status: Object,
-    required: true
+    status: {
+      type: Object,
+      required: true
+    }
   },
   methods: {
     like: function like(status) {

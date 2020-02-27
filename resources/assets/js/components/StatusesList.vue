@@ -1,6 +1,6 @@
 <template>
   <div @click="redireccionarInvitado">
-    <status-list-item v-for="status in statuses" v-bind:key="status.id"></status-list-item>
+    <status-list-item v-for="status in statuses" v-bind:key="status.id" :status="status"></status-list-item>
   </div>
 </template>
 

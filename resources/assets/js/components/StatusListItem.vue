@@ -30,8 +30,10 @@
 import LikeBtn from "./LikeBtn";
 export default {
   props: {
-    status: Object,
-    required: true
+    status: {
+      type: Object,
+      required: true
+    }
   },
   components: {
     LikeBtn
