@@ -21,7 +21,8 @@ class StatusResource extends JsonResource
             'user_avatar' => 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y',
             'ago' => $this->created_at->diffForHumans(),
             'is_liked' => $this->isLiked(),
-            'likes_count' => $this->likesCount()
+            'likes_count' => $this->likesCount(),
+            'comments' => CommentResource::collection($this->comments)
         ];
     }
 }
