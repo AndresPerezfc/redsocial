@@ -27,7 +27,6 @@ class StatusesController extends Controller
             'body' => request('body'),
             'user_id' => auth()->id()
         ]);
-
         return StatusResource::make($status);
     }
 
