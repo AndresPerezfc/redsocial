@@ -11,5 +11,10 @@ module.exports = {
         guest() {
             return !this.estaAutenticado;
         }
+    },
+    methods: {
+        redireccionarInvitado() {
+            if (this.guest) return (window.location.href = "/login");
+        }
     }
 };

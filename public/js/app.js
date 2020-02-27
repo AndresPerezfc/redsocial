@@ -49892,6 +49892,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { on: { click: _vm.redireccionarInvitado } },
     _vm._l(_vm.statuses, function(status) {
       return _c(
         "div",
@@ -50004,6 +50005,11 @@ module.exports = {
         },
         guest: function guest() {
             return !this.estaAutenticado;
+        }
+    },
+    methods: {
+        redireccionarInvitado: function redireccionarInvitado() {
+            if (this.guest) return window.location.href = "/login";
         }
     }
 };
