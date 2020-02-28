@@ -22,15 +22,47 @@
         <i class="far fa-thumbs-up"></i>
         <span dusk="list-count">{{status.likes_count}}</span>
       </div>
+    </div>
 
-      <form @submit.prevent="addComment">
-        <textarea name="comment" v-model="newComment"></textarea>
-        <button dusk="comment-btn">Enviar</button>
-      </form>
-      <div v-for="comment in comments" v-bind:key="comment.id">
-        {{comment.user_name}}
-        {{comment.body}}
+    <div class="card-footer">
+      <div v-for="comment in comments" v-bind:key="comment.id" class="mb-2">
+        <img
+          class="rounded shadow-sm float-left mr-2"
+          width="32px"
+          :src="comment.user_avatar"
+          :alt="comment.user_name"
+        />
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-2 text-secondary">
+            <a href="#">
+              <strong>{{comment.user_name}}</strong>
+            </a>
+            {{comment.body}}
+          </div>
+        </div>
       </div>
+
+      <form @submit.prevent="addComment" v-if="estaAutenticado">
+        <div class="d-flex align-items-center">
+          <img
+            class="rounded shadow-sm float-left mr-2"
+            width="32px"
+            src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"
+          />
+          <div class="input-group">
+            <textarea
+              class="form-control border-0 shadow-sm"
+              name="comment"
+              v-model="newComment"
+              rows="1"
+              placeholder="Escribe un comentario aquí..."
+            ></textarea>
+            <div class="input-group-append">
+              <button class="btn btn-secondary" dusk="comment-btn">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </template>
