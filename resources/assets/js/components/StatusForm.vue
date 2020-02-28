@@ -7,6 +7,7 @@
           class="form-control border-0"
           name="body"
           :placeholder="`¿Qué estas pensando ${usuarioActual.name}?`"
+          required
         ></textarea>
       </div>
 
