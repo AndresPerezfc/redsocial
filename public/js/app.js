@@ -49536,7 +49536,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -49580,6 +49580,7 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -49663,7 +49664,8 @@ var render = function() {
                 attrs: {
                   name: "body",
                   placeholder:
-                    "¿Qué estas pensando " + _vm.usuarioActual.name + "?"
+                    "¿Qué estas pensando " + _vm.usuarioActual.name + "?",
+                  required: ""
                 },
                 domProps: { value: _vm.body },
                 on: {
